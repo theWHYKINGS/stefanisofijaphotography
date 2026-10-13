@@ -8,9 +8,11 @@ by hand is wiped. This re-applies it idempotently:
   * <title> + meta description + canonical + og tags + favicon
   * <script src="enhance.js"> (contact form delivery + mobile layout)
   * Impressum / Datenschutz links in the footer (the design has none)
+  * footer copyright year → current year (design says 2025)
 
     python3 scripts/inject_head.py
 """
+import datetime
 import re
 from pathlib import Path
 
@@ -65,6 +67,13 @@ if 'class="ss-legal"' not in html:
         changed.append("footer legal links")
     else:
         print("  ! footer tagline not found — legal links NOT injected (footer changed in the design?)")
+
+# Footer copyright: always the current year, whatever the design says.
+year = datetime.date.today().year
+new, n = re.subn(r"© 20\d\d(?= Stefani)", f"© {year}", html)
+if new != html:
+    html = new
+    changed.append(f"© {year}")
 
 idx.write_text(html, encoding="utf-8")
 print("✓ inject_head: " + (", ".join(changed) if changed else "already up to date"))
