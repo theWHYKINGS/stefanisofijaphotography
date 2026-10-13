@@ -71,7 +71,7 @@ then lets React show the design's "Danke" state) and adds the mobile layout
 - Domain = **www.stefanisofijaphotography.com** (NOT stefanisofija.com), DNS at
   all-inkl (ns5/ns6.kasserver.com): `www` CNAME → `theWHYKINGS.github.io.`,
   apex A → 185.199.108.153 / .109 / .110 / .111. `CNAME` file in repo.
-- ⚠️ `WEB3FORMS_KEY` still a placeholder → form falls back to opening the
+- Web3Forms key set 2026-10-13 (created by Stefani with her gmail).
   visitor's mail program (mailto:). Once Stefani has her key from
   web3forms.com (created with stefanisofijaphotography@gmail.com), set it in
   enhance.js and deploy.
