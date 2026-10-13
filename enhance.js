@@ -73,7 +73,11 @@
     }
 
     if (!configured(WEB3FORMS_KEY)) {
-      if (configured(CONTACT_EMAIL)) { window.location.href = mailtoHref(d); letThrough = true; btn.click(); }
+      if (configured(CONTACT_EMAIL)) {
+        window.location.href = mailtoHref(d);
+        note(btn, 'Euer E-Mail-Programm öffnet sich mit der fertigen Anfrage – bitte dort noch absenden. ' +
+          'Alternativ direkt an <a href="mailto:' + CONTACT_EMAIL + '" style="color:#111">' + CONTACT_EMAIL + '</a>.', false);
+      }
       else note(btn, 'Das Formular ist noch nicht aktiv.', true);
       return;
     }
