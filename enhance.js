@@ -18,7 +18,7 @@
   // ==== Config ====
   // Stefani's address (mailto fallback) + her web3forms.com access key (a public
   // form-id; it can only send TO the address it was created for).
-  var CONTACT_EMAIL = '__CONTACT_EMAIL__';
+  var CONTACT_EMAIL = 'stefanisofijaphotography@gmail.com';
   var WEB3FORMS_KEY = '__WEB3FORMS_KEY__';
 
   var configured = function (v) { return v && v.indexOf('__') !== 0; };
@@ -86,7 +86,7 @@
       headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
       body: JSON.stringify({
         access_key: WEB3FORMS_KEY,
-        subject: 'Neue Anfrage über stefanisofija.com',
+        subject: 'Neue Anfrage über stefanisofijaphotography.com',
         from_name: (d.vorname + ' ' + d.nachname).trim(),
         replyto: d.email,
         vorname: d.vorname, nachname: d.nachname, email: d.email,

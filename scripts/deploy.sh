@@ -2,7 +2,7 @@
 #
 # deploy.sh — post-process the freshly pulled design and publish it to
 # GitHub Pages (github.com/theWHYKINGS/stefanisofijaphotography →
-# https://www.stefanisofija.com).
+# https://www.stefanisofijaphotography.com).
 #
 # Usage:
 #   scripts/deploy.sh                 # timestamped commit message
@@ -23,8 +23,7 @@ MSG="${1:-Update site — $(date '+%Y-%m-%d %H:%M')}"
 echo "Pointing fonts, photos + React/Babel at local copies…"
 python3 scripts/localize_assets.py
 echo "Building legal pages…"
-# TODO: drop --allow-placeholders once Stefani's Impressum details are filled in
-python3 scripts/build_legal.py --allow-placeholders
+python3 scripts/build_legal.py
 echo "Injecting title / meta / enhance.js / footer legal links…"
 python3 scripts/inject_head.py
 
@@ -48,4 +47,4 @@ gh api -X POST "repos/$REPO/pages/builds" --jq '.status' || \
 
 echo
 echo "✅ Pushed. GitHub Pages will rebuild in ~1 minute."
-echo "   Live:  https://www.stefanisofija.com"
+echo "   Live:  https://www.stefanisofijaphotography.com"

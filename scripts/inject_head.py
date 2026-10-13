@@ -21,7 +21,7 @@ html = idx.read_text(encoding="utf-8")
 TITLE = "Stefani Sofija — Hochzeitsfotografie"
 DESC = ("Hochzeitsfotografie von Stefani Sofija: ehrlich, ruhig und nah an euch. "
         "Reduzierte, zeitlose Bilder von den echten Momenten eures Tages.")
-URL = "https://www.stefanisofija.com/"
+URL = "https://www.stefanisofijaphotography.com/"
 
 HEAD = f"""<title>{TITLE}</title>
 <meta name="description" content="{DESC}" />

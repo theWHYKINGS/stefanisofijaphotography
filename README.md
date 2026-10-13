@@ -1,7 +1,7 @@
-# stefanisofija.com
+# stefanisofijaphotography.com
 
 Portfolio site for **Stefani Sofija — Hochzeitsfotografie**, hosted on GitHub
-Pages (`theWHYKINGS/stefanisofijaphotography`, target domain `www.stefanisofija.com`).
+Pages (`theWHYKINGS/stefanisofijaphotography`, custom domain `www.stefanisofijaphotography.com`).
 
 Like the other WHYKINGS sites, it's built from a **Claude Design** project and
 hosted as the live source (client-rendered `index.html` + `support.js`).

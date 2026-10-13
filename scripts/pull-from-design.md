@@ -63,18 +63,15 @@ Web3Forms (capture-phase click on "Abschicken", validates Vorname + E-Mail,
 then lets React show the design's "Danke" state) and adds the mobile layout
 (the design is desktop-only). Config at the top: `CONTACT_EMAIL`, `WEB3FORMS_KEY`.
 
-## ⚠️ Open before go-live (as of 2026-10-13)
+## Status (2026-10-13)
 
-1. **Impressum/Datenschutz data** — fill `[[STRASSE_HAUSNUMMER]]`, `[[PLZ_ORT]]`,
-   `[[TELEFON]]`, `[[EMAIL]]`, `[[UMSATZSTEUER]]` in `src/legal/*.html`, then
-   drop `--allow-placeholders` from deploy.sh.
-2. **Web3Forms** — Stefani creates a free access key on web3forms.com with her
-   address → set `WEB3FORMS_KEY` + `CONTACT_EMAIL` in enhance.js.
-3. **Domain** — `stefanisofija.com` is registered at RegistryGate, nameservers
-   currently at onepage.io (old site already 404s). Then: add `CNAME` file
-   (`www.stefanisofija.com`), set custom domain in Pages, DNS `www` CNAME →
-   `theWHYKINGS.github.io.`, apex A → 185.199.108–111.153, enforce HTTPS.
-
-Until the domain is set, the site previews at
-https://www.thewhykings.com/stefanisofijaphotography/ (project page under the
-theWHYKINGS user site's custom domain).
+- Impressum/Datenschutz filled: Ossiacher Str. 16, 80687 München,
+  stefanisofijaphotography@gmail.com, Kleinunternehmerin § 19 UStG, no phone
+  (the contact form serves as the second fast contact channel).
+- Domain = **www.stefanisofijaphotography.com** (NOT stefanisofija.com), DNS at
+  all-inkl (ns5/ns6.kasserver.com): `www` CNAME → `theWHYKINGS.github.io.`,
+  apex A → 185.199.108.153 / .109 / .110 / .111. `CNAME` file in repo.
+- ⚠️ `WEB3FORMS_KEY` still a placeholder → form falls back to opening the
+  visitor's mail program (mailto:). Once Stefani has her key from
+  web3forms.com (created with stefanisofijaphotography@gmail.com), set it in
+  enhance.js and deploy.
